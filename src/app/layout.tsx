@@ -18,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} text-gray`}>
+      <body className={`${poppins.className} text-gray bg-white`}>
         <NextAuthProvider>
           <Header />
 
