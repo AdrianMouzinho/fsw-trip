@@ -22,6 +22,8 @@ model Trip {
   highlights  String[]
   coverUrl    String
   imageUrls   String[]
+  countryCode String
+  recommended Boolean  @default(false)
 
   reservations TripReservation[]
 }
