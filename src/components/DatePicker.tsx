@@ -25,7 +25,7 @@ function Input(
   )
 
   return (
-    <div className="flex flex-col gap-1">
+    <div className="col-span-2 flex flex-col gap-1">
       <DatePicker
         locale="pt-BR"
         wrapperClassName="w-full"

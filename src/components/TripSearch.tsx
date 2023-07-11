@@ -12,19 +12,16 @@ export function TripSearch() {
         Encontre sua próxima <span className="text-purple">viagem!</span>
       </h1>
 
-      <form className="w-full max-w-[938px] flex flex-col gap-4">
-        <Input type="text" placeholder="Onde você quer ir?" />
+      <form className="w-full max-w-[938px] grid grid-cols-4 gap-4">
+        <Input type="text" placeholder="Onde você quer ir?" className="" />
 
-        <div className="flex gap-4">
-          <DatePicker
-            placeholderText="Primeira data"
-            onChange={() => {}}
-            className="w-full"
-          />
-          <CurrencyInput placeholder="Orçamento" />
-        </div>
+        <DatePicker placeholderText="Primeira data" onChange={() => {}} />
 
-        <Button type="submit">Pesquisar</Button>
+        <CurrencyInput placeholder="Orçamento" />
+
+        <Button type="submit" className="col-span-full">
+          Pesquisar
+        </Button>
       </form>
     </main>
   )

@@ -16,7 +16,7 @@ function Input(
   )
 
   return (
-    <div className="flex flex-col gap-1">
+    <div className="col-span-full flex flex-col gap-1">
       <input ref={ref} className={inputClassName} {...rest} />
 
       {errorMessage && <span className="text-sm text-red">{errorMessage}</span>}
