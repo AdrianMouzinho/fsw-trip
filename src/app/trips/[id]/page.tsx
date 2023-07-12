@@ -1,4 +1,5 @@
 import { TripHeader } from '@/components/TripHeader'
+import { TripReservation } from '@/components/TripReservation'
 import { prisma } from '@/lib/prisma'
 
 interface TripDetailsProps {
@@ -22,8 +23,12 @@ export default async function TripDetails({ params }: TripDetailsProps) {
 
   return (
     <div className="container mx-auto">
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-5">
         <TripHeader trip={trip} />
+
+        <div className="px-5 flex flex-col">
+          <TripReservation />
+        </div>
       </div>
     </div>
   )
