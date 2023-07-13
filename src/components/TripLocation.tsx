@@ -12,7 +12,7 @@ export function TripLocation({ location }: TripLocationProps) {
       <h2 className="font-semibold text-dark-purple">Localização</h2>
 
       <div className="relative h-64 w-full">
-        <Image src={map} alt="" fill className="object-cover rounded" />
+        <Image src={map} alt={location} fill className="object-cover rounded" />
       </div>
 
       <h3 className="font-semibold text-dark-purple">{location}</h3>
