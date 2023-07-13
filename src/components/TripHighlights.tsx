@@ -1,4 +1,4 @@
-import { CheckCircle } from 'lucide-react'
+import { CheckCircle2 } from 'lucide-react'
 
 interface TripHighlightsProps {
   highlights: string[]
@@ -15,7 +15,7 @@ export function TripHighlights({ highlights }: TripHighlightsProps) {
             key={`${highlight}-${i}`}
             className="flex items-center gap-1 text-sm leading-6"
           >
-            <CheckCircle size={16} className="text-purple" />
+            <CheckCircle2 size={16} className="text-purple" />
             {highlight}
           </span>
         ))}
