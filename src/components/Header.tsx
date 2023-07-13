@@ -54,7 +54,7 @@ export function Header() {
           )}
 
           {isMenuOpen && (
-            <div className="absolute h-full w-full top-full right-0 mt-3 flex items-center justify-center bg-white rounded-full border border-light-gray">
+            <div className="z-50 absolute h-full w-full top-full right-0 mt-3 flex items-center justify-center bg-white rounded-full border border-light-gray">
               <span
                 onClick={handleSignOut}
                 className="text-red flex-1 cursor-pointer font-semibold"
