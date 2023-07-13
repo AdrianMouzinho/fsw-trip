@@ -29,7 +29,11 @@ export default async function TripDetails({ params }: TripDetailsProps) {
       <TripHeader trip={trip} />
 
       <div className="mt-5 px-5 flex flex-col gap-10">
-        <TripReservation trip={trip} />
+        <TripReservation
+          startDate={trip.startDate}
+          endDate={trip.endDate}
+          maxGuests={trip.maxGuests}
+        />
 
         <div className="space-y-10">
           <TripDescription description={trip.description} />
