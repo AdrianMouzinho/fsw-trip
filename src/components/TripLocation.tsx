@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import map from '@/assets/map.png'
-import { Button } from './Button'
+import { SecondaryButton } from './SecondaryButton'
 
 interface TripLocationProps {
   location: string
@@ -17,9 +17,9 @@ export function TripLocation({ location }: TripLocationProps) {
 
       <h3 className="font-semibold text-dark-purple">{location}</h3>
 
-      <Button className="bg-white border border-purple">
+      <SecondaryButton className="block w-full">
         Ver no Google Maps
-      </Button>
+      </SecondaryButton>
     </div>
   )
 }
