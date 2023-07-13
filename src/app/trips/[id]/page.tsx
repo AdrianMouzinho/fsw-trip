@@ -40,7 +40,10 @@ export default async function TripDetails({ params }: TripDetailsProps) {
           </div>
         </div>
 
-        <TripLocation location={trip.location} />
+        <TripLocation
+          location={trip.location}
+          description={trip.locationDescription}
+        />
       </div>
 
       <Footer />
