@@ -15,7 +15,7 @@ export async function RecommendedTrips() {
   const recommendedTrips = await getRecommendedTrips()
 
   return (
-    <div className="container mx-auto mt-5 px-5 space-y-[1.125rem]">
+    <div className="container mx-auto mt-5 mb-10 px-5 space-y-[1.125rem]">
       <div className="flex items-center gap-2">
         <hr className="w-full border-t border-light-gray" />
         <h2 className="font-medium leading-6 whitespace-nowrap">
