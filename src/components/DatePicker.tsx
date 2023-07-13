@@ -11,7 +11,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 registerLocale('pt-BR', ptBr)
 
 interface InputProps extends ReactDatePickerProps {
-  errorMessage?: string | null
+  errorMessage?: string | null | undefined
 }
 
 function Input(

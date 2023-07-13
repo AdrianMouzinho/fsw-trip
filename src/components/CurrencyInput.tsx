@@ -2,7 +2,7 @@ import { twMerge } from 'tailwind-merge'
 import Input, { CurrencyInputProps } from 'react-currency-input-field'
 
 interface InputProps extends CurrencyInputProps {
-  errorMessage?: string | null
+  errorMessage?: string | null | undefined
 }
 
 export function CurrencyInput({

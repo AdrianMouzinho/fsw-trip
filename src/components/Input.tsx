@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, LegacyRef, forwardRef } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 interface InputProps extends ComponentPropsWithoutRef<'input'> {
-  errorMessage?: string | null
+  errorMessage?: string | null | undefined
 }
 
 function Input(
