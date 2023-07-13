@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import { Menu } from 'lucide-react'
 
@@ -25,7 +26,9 @@ export function Header() {
 
   return (
     <header className="container mx-auto h-20 flex items-center justify-between px-5">
-      <Image src={fswLogo} alt="FSW Trips" />
+      <Link href="/">
+        <Image src={fswLogo} alt="FSW Trips" />
+      </Link>
 
       {status === 'unauthenticated' ? (
         <button onClick={handleSignIn} className="text-purple font-semibold">
