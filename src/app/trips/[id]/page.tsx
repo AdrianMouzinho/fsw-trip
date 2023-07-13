@@ -33,6 +33,7 @@ export default async function TripDetails({ params }: TripDetailsProps) {
           startDate={trip.startDate}
           endDate={trip.endDate}
           maxGuests={trip.maxGuests}
+          pricePerDay={Number(trip.pricePerDay)}
         />
 
         <div className="space-y-10">

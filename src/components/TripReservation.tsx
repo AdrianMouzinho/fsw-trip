@@ -5,11 +5,13 @@ import { Controller, useForm } from 'react-hook-form'
 import { Button } from './Button'
 import DatePicker from './DatePicker'
 import Input from './Input'
+import { getTotalPrice } from '@/utils/getTotalPrice'
 
 interface TripReservationProps {
   maxGuests: number
   startDate: Date
   endDate: Date
+  pricePerDay: number
 }
 
 interface TripReservationForm {
@@ -22,6 +24,7 @@ export function TripReservation({
   endDate,
   startDate,
   maxGuests,
+  pricePerDay,
 }: TripReservationProps) {
   const {
     control,
@@ -80,7 +83,7 @@ export function TripReservation({
             selected={value}
             minDate={selectedStartDate ?? startDate}
             maxDate={endDate}
-            errorMessage={errors.startDate?.message}
+            errorMessage={errors.endDate?.message}
           />
         )}
       />
@@ -102,7 +105,11 @@ export function TripReservation({
           Total (7 noites)
         </span>
 
-        <span className="text-sm font-medium text-dark-purple">R$2.660</span>
+        <span className="text-sm font-medium text-dark-purple">
+          {selectedStartDate && selectedEndDate
+            ? getTotalPrice(selectedStartDate, selectedEndDate, pricePerDay)
+            : 'R$0'}
+        </span>
       </div>
 
       <Button type="submit" className="col-span-full">
